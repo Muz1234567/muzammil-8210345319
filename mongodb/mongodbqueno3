@@ -1,0 +1,251 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5470b402-8d12-4617-bfda-a871349a936a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "8d4182ce-31b3-40a0-9907-1d4fd0eda23a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pymongo\n",
+    "client=pymongo.MongoClient(\"mongodb+srv://jamalshahroz57:shahroz@cluster0.9syittf.mongodb.net/?retryWrites=true&w=majority\")\n",
+    "db=client.test\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "9dd5b0f8-b3b7-470c-8ad8-df623b553f1c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: pymongo in c:\\users\\shahid jamal\\anaconda3\\lib\\site-packages (4.5.0)\n",
+      "Requirement already satisfied: dnspython<3.0.0,>=1.16.0 in c:\\users\\shahid jamal\\anaconda3\\lib\\site-packages (from pymongo) (2.4.2)\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install pymongo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "6d8e48d7-a60f-42a6-9ecd-50a7eaa6dc9b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "MongoClient(host=['ac-ra1bdb6-shard-00-00.9syittf.mongodb.net:27017', 'ac-ra1bdb6-shard-00-02.9syittf.mongodb.net:27017', 'ac-ra1bdb6-shard-00-01.9syittf.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-12bkmr-shard-0', tls=True)"
+      ]
+     },
+     "execution_count": 59,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "client"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "id": "b5cbf3c8-1aee-4738-8819-7a2ac6ffecbc",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "client=pymongo.MongoClient(\"mongodb+srv://jamalshahroz57:shahroz@cluster0.9syittf.mongodb.net/?retryWrites=true&w=majority\")\n",
+    "db=client['result']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "76da08fa-4a90-43dc-a9dd-77abe8cfe884",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "coll_create=db[\"student_details\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "c98b9c58-677d-4e9e-a25f-2e637d703e76",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "data={\"NAME\":\"SHAHROZ\",\n",
+    "      \"ROLLNO\":\"10232\",\n",
+    "      \"MARKS_OBTAINED\":\"488\",\n",
+    "      \"DIVISION\":\"1st\"\n",
+    "     }      \n",
+    "           "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "id": "da46e4e0-511d-4275-a752-7c2e73518c3a",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<pymongo.results.InsertOneResult at 0x1adb86f9330>"
+      ]
+     },
+     "execution_count": 63,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "coll_create.insert_one(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "2460c8fd-c3d7-46e7-a365-ac84c8350072",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "exam={\"type\":\"final_year\",\n",
+    "      \"conducting_month\":\"march\",\n",
+    "      \"syllabus\":\"whole\",\n",
+    "      \"subject\":\"all\"\n",
+    "     }"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "c7e83fae-e830-4bbc-8c71-bdcd1ac59e9d",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<pymongo.results.InsertOneResult at 0x1adb85a3e20>"
+      ]
+     },
+     "execution_count": 65,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "coll_create.insert_one(exam)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "9c5586d2-b2e1-4ece-9c74-62e8dad9c6fe",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "coll_create=db[\"performance\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "75d185bc-901c-4bce-9f0c-249f99b82edc",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "school={\"dps_school\":\"excellent\",\n",
+    "        \"loyola_public_school\":\"good\",\n",
+    "        \"dav_public_school\":\"average\",\n",
+    "        \"heritage_public_school\":\"poor\"\n",
+    "       }"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "9eb2dfa7-e1f8-46a3-9530-296d49a8b725",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<pymongo.results.InsertOneResult at 0x1adb6cc44c0>"
+      ]
+     },
+     "execution_count": 69,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "coll_create.insert_one(school)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8ad73a44-deef-4e44-b37e-752bf0fe4f18",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#so in this way with the help of python code we are able to create datbase result and under it able to create collection 'student details and school."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
