@@ -1,0 +1,68 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "f02967f9-be4f-4fd0-8705-50b6fbb6059b",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "queno4=(\"https://colab.research.google.com/drive/1PDydmTkn3Sa1GPtt2VuV8HJJYY6PvSTK?usp=sharing\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "31334565-fdd6-4980-980c-c0c7d53c266e",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'https://colab.research.google.com/drive/1PDydmTkn3Sa1GPtt2VuV8HJJYY6PvSTK?usp=sharing'"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "queno4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5a94e180-e362-49b3-bae6-d8dcc8f22323",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
